@@ -1,0 +1,95 @@
+﻿<Page x:Class="TP2.Presentation.GamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:TP2.Presentation"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:um="using:Uno.Material"
+      NavigationCacheMode="Required"
+      Background="#A4D555">
+
+
+    <Viewbox Stretch="Uniform">
+
+        <ScrollViewer IsTabStop="True">
+        <Grid HorizontalAlignment="Center">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+                
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Background="#A4D555" BorderBrush="#A4D555" BorderThickness="1" Grid.Row="0">
+                    <TextBlock
+                           Text="Memo Fruits"
+                           FontSize="36"
+                           HorizontalAlignment="Center"
+                           Margin="20"/>
+
+                    <TextBlock
+                        x:Name="MovesTextBlock"
+                        Text="Coups : 0"
+                        HorizontalAlignment="Center"
+                        Margin="10"/>
+
+                    <TextBlock
+                        x:Name="PairsTextBlock"
+                        Text="Paires Restantes : 0"
+                        FontSize="18"
+                        HorizontalAlignment="Center"
+                        Margin="10"/>
+                </StackPanel>
+
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Background="#F24141" BorderBrush="#3B1E54" BorderThickness="25" CornerRadius="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card0" Grid.Row="0" Grid.Column="0" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card1" Grid.Row="0" Grid.Column="1" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card2" Grid.Row="0" Grid.Column="2" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card3" Grid.Row="0" Grid.Column="3" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card4" Grid.Row="1" Grid.Column="0" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card5" Grid.Row="1" Grid.Column="1" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card6" Grid.Row="1" Grid.Column="2" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card7" Grid.Row="1" Grid.Column="3" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card8" Grid.Row="2" Grid.Column="0" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card9" Grid.Row="2" Grid.Column="1" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card10" Grid.Row="2" Grid.Column="2" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card11" Grid.Row="2" Grid.Column="3" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card12" Grid.Row="3" Grid.Column="0" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card13" Grid.Row="3" Grid.Column="1" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card14" Grid.Row="3" Grid.Column="2" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" x:Name="Card15" Grid.Row="3" Grid.Column="3" Click="Card_Click" Background="#FFF8E7" BorderBrush="#D4CABA" BorderThickness="3" Margin="10"/>
+
+                </Grid>
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Background="#A4D555" BorderBrush="#A4D555" BorderThickness="1" Grid.Row="2">
+                    <Button x:Name="NewGameBtn" Content="New Game" HorizontalAlignment="Center" VerticalAlignment="Center" Click="newGameButton" Margin="20"/>
+                </StackPanel>
+            
+        </Grid>
+    </ScrollViewer>
+
+    </Viewbox>
+        
+</Page>

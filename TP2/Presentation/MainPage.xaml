@@ -1,0 +1,76 @@
+﻿<Page x:Class="TP2.Presentation.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:TP2.Presentation"
+      xmlns:uen="using:Uno.Extensions.Navigation.UI"
+      xmlns:utu="using:Uno.Toolkit.UI"
+      xmlns:um="using:Uno.Material"
+      NavigationCacheMode="Required">
+
+    <Page.Background>
+        <ImageBrush ImageSource="Assets/Images/MemF.png" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Grid x:Name="RootGrid">
+
+        <ScrollViewer IsTabStop="True">
+
+        <Grid HorizontalAlignment="Center">
+
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <StackPanel 
+                Grid.Row="1"
+                Orientation="Vertical"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,20"
+                Spacing="20">
+
+                    <Button Content="Play" Width="200" Height="60" Click="GoToGame" Background="#EA564D" Foreground="Black"/>
+                    <Button Content="Rules" Width="200" Height="60" Click="ShowRules" Background="#EA564D" Foreground="Black"/>
+
+            </StackPanel>  
+
+        </Grid>
+
+    </ScrollViewer>
+
+        <Grid x:Name="RulesOverlay"
+              Background="#80000000"
+              Tapped="CloseRulesOverlay"
+              Visibility="Collapsed">
+
+            <Border Background="White"
+                    CornerRadius="10"
+                    Padding="20"
+                    Width="600"
+                    Height="400"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+
+            <Grid>
+                    <Image Source="ms-appx:///Assets/Images/Rules.png"
+                           Stretch="Uniform"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+                    <Button Content="Close"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="10"
+                            Click="CloseRulesOverlay"
+                            Background="#EA564D"
+                            Foreground="Black"/>
+                </Grid>
+            
+        </Grid> <!-- RulesOverlay Grid Closes-->
+
+    </Grid> <!-- Root Grid Closes-->
+</Page>
